@@ -1,0 +1,316 @@
+.admin-page {
+  min-height: 100vh;
+  padding: calc(var(--spacing) * 15) calc(var(--spacing) * 4) calc(var(--spacing) * 8);
+}
+
+.admin-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, var(--accent-red), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.add-button {
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  background: linear-gradient(135deg, var(--accent-red), var(--neon-purple));
+  border: none;
+  border-radius: 12px;
+  color: var(--text-main);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.4);
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(162, 89, 255, 0.6);
+}
+
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: calc(var(--spacing) * 4);
+  overflow-y: auto;
+}
+
+.part-form {
+  max-width: 800px;
+  width: 100%;
+  padding: calc(var(--spacing) * 6);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button:hover {
+  background: rgba(255, 59, 59, 0.2);
+  border-color: var(--accent-red);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing) * 3);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing));
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.field-input {
+  padding: calc(var(--spacing) * 1.5);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.field-input:focus {
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+}
+
+.field-input option {
+  background: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(var(--spacing) * 2);
+  padding-top: calc(var(--spacing) * 2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cancel-button {
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.save-button {
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+  background: linear-gradient(135deg, var(--accent-red), var(--neon-purple));
+  border: none;
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.3);
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.5);
+}
+
+.parts-table {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px 100px 180px;
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 3);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-cell {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 120px 100px 180px;
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table-cell {
+  font-size: 14px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+}
+
+.table-cell.actions {
+  display: flex;
+  gap: calc(var(--spacing) * 1.5);
+}
+
+.edit-button {
+  padding: calc(var(--spacing)) calc(var(--spacing) * 2);
+  background: rgba(162, 89, 255, 0.2);
+  border: 1px solid rgba(162, 89, 255, 0.4);
+  border-radius: 6px;
+  color: var(--neon-purple);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background: rgba(162, 89, 255, 0.3);
+  border-color: var(--neon-purple);
+}
+
+.delete-button {
+  padding: calc(var(--spacing)) calc(var(--spacing) * 2);
+  background: rgba(255, 59, 59, 0.2);
+  border: 1px solid rgba(255, 59, 59, 0.4);
+  border-radius: 6px;
+  color: var(--accent-red);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background: rgba(255, 59, 59, 0.3);
+  border-color: var(--accent-red);
+}
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 80px 1fr 100px 80px 160px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-title {
+    font-size: 32px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parts-table {
+    overflow-x: auto;
+  }
+
+  .table-header,
+  .table-row {
+    min-width: 700px;
+  }
+}
