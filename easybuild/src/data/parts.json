@@ -1,0 +1,35 @@
+{
+  "cpu": [
+    {"id":"cpu1","name":"Intel Core i3-12100F","price":100,"score":60,"socket":"LGA1700","tdp":60,"ram_type":"DDR4","desc":"Good budget CPU for entry gaming."},
+    {"id":"cpu2","name":"AMD Ryzen 5 5600","price":140,"score":75,"socket":"AM4","tdp":65,"ram_type":"DDR4","desc":"Great midrange CPU for gaming."},
+    {"id":"cpu3","name":"Intel Core i5-12400F","price":170,"score":85,"socket":"LGA1700","tdp":65,"ram_type":"DDR4","desc":"Strong performer for 1080p/1440p gaming."}
+  ],
+  "gpu": [
+    {"id":"gpu1","name":"NVIDIA GTX 1650","price":150,"score":50,"tdp":75,"desc":"Entry-level GPU for low-medium settings."},
+    {"id":"gpu2","name":"NVIDIA RTX 3050","price":250,"score":70,"tdp":130,"desc":"Good 1080p experience on medium-high settings."},
+    {"id":"gpu3","name":"AMD RX 6600","price":280,"score":80,"tdp":132,"desc":"Great 1080p/1440p value GPU."},
+    {"id":"gpu4","name":"NVIDIA RTX 4060","price":400,"score":92,"tdp":160,"desc":"High 1080p/1440p performance."}
+  ],
+  "mobo": [
+    {"id":"m1","name":"ASRock B550M","price":90,"score":60,"socket":"AM4","ram_type":"DDR4","desc":"Budget AM4 motherboard."},
+    {"id":"m2","name":"MSI PRO B660M","price":110,"score":70,"socket":"LGA1700","ram_type":"DDR4","desc":"Affordable LGA1700 board."},
+    {"id":"m3","name":"Gigabyte B650","price":140,"score":80,"socket":"AM4","ram_type":"DDR4","desc":"Solid midrange AM4 board."}
+  ],
+  "ram": [
+    {"id":"ram1","name":"8GB DDR4 3200","price":30,"score":45,"ram_type":"DDR4","desc":"Minimum for light gaming."},
+    {"id":"ram2","name":"16GB DDR4 3200","price":55,"score":80,"ram_type":"DDR4","desc":"Sweet spot for most games."},
+    {"id":"ram3","name":"32GB DDR4 3600","price":100,"score":95,"ram_type":"DDR4","desc":"Overkill for gaming, good for multitasking."}
+  ],
+  "storage": [
+    {"id":"s1","name":"500GB SATA SSD","price":30,"score":50,"desc":"Fast enough for OS and a few games."},
+    {"id":"s2","name":"1TB NVMe SSD","price":70,"score":80,"desc":"Fast and roomy for many games."}
+  ],
+  "psu": [
+    {"id":"ps1","name":"450W Bronze","price":40,"score":50,"wattage":450,"desc":"Budget PSU for low-power builds."},
+    {"id":"ps2","name":"650W Gold","price":80,"score":90,"wattage":650,"desc":"Reliable for mid-high builds."}
+  ],
+  "case": [
+    {"id":"c1","name":"Mid Tower Case","price":50,"score":60,"desc":"Basic case with good airflow."},
+    {"id":"c2","name":"Compact Case","price":40,"score":50,"desc":"Small, good for compact builds."}
+  ]
+}
