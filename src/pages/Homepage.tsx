@@ -22,6 +22,11 @@ const Homepage: React.FC = () => {
           </div>
           <div className="hero-image">
             <div className="pc-showcase">
+              <img
+                src="https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="High-end gaming PC with RGB lighting"
+                className="gaming-pc-image"
+              />
               <div className="glow-effect glow-1"></div>
               <div className="glow-effect glow-2"></div>
               <div className="glow-effect glow-3"></div>
